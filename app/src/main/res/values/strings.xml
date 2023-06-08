@@ -7,4 +7,7 @@
     <string name="location_title">Санкт-Петербург</string>
     <string name="date_title">12 Августа, 2023</string>
     <string name="category_item_title">Пекарни \nи кондитерское</string>
+    <string name="second_activity_title">Азиатская кухня</string>
+    <string name="dishes_title">Рис с овощами</string>
+    <string name="tag_title">Все меню</string>
 </resources>
