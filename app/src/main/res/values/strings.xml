@@ -10,4 +10,5 @@
     <string name="second_activity_title">Азиатская кухня</string>
     <string name="dishes_title">Рис с овощами</string>
     <string name="tag_title">Все меню</string>
+    <string name="tag_one">Все меню</string>
 </resources>
