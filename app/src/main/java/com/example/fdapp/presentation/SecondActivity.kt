@@ -33,7 +33,6 @@ class SecondActivity : AppCompatActivity() {
 
 
         val layoutManager = GridLayoutManager(this, 3)
-
         binding.rvDishes.layoutManager = layoutManager
         dishesAdapter = DishesAdapter(object : OnDishesClickListener {
             override fun onClick(dishes: Dishes) {
