@@ -34,7 +34,14 @@ class SecondActivity : AppCompatActivity() {
         }
 
         viewModel.tagState.observe(this){
-            tagAdapter = TagAdapter(it)
+            tagAdapter = TagAdapter(it, object : OnTagClickListener {
+
+                override fun onTagClick(tag: Tag) {
+                    val toast = Toast.makeText(this@SecondActivity, tag.name, Toast.LENGTH_SHORT)
+                    toast.setGravity(Gravity.BOTTOM, 0, 160)
+                    toast.show()
+                }
+            } )
             binding.rvTag.adapter = tagAdapter
         }
 
