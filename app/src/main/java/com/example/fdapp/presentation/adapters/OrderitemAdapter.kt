@@ -3,10 +3,8 @@ package com.example.fdapp.presentation.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fdapp.databinding.DishesItemBinding
 import com.example.fdapp.databinding.OrderItemBinding
-import com.example.fdapp.model.Dishes
-import com.example.fdapp.model.Order
+import com.example.fdapp.database.Order
 import com.squareup.picasso.Picasso
 
 class OrderitemAdapter(private val orderList: ArrayList<Order>): RecyclerView.Adapter<OrderitemAdapter.OrderItemViewHolder>() {

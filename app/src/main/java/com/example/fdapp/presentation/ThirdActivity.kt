@@ -1,10 +1,9 @@
 package com.example.fdapp.presentation
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fdapp.databinding.ActivityThirdBinding
-import com.example.fdapp.model.Order
+import com.example.fdapp.database.Order
 import com.example.fdapp.presentation.adapters.OrderitemAdapter
 
 class ThirdActivity : AppCompatActivity() {
