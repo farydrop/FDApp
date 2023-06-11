@@ -11,4 +11,11 @@
     <string name="dishes_title">Рис с овощами</string>
     <string name="tag_title">Все меню</string>
     <string name="tag_one">Все меню</string>
+    <string name="dialog_title">Рыба с овощами и рисом</string>
+    <string name="price_dialog">799</string>
+    <string name="weight_dialog">560</string>
+    <string name="description_dialog">Рыба маринованная со специями, лимонным соком, соевым соусом и запечeнная в духовке с лучком, томатами и картошечкой под золотистой майонезно-сырной шубкой</string>
+    <string name="add_button_dialog">Добавить в корзину</string>
+    <string name="w_dialog">г</string>
+    <string name="p_dialog">₽</string>
 </resources>

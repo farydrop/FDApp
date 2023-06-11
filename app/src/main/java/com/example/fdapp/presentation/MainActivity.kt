@@ -23,26 +23,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //setupCategoryList()
-
-        //recyclerView = binding.rvCategory
-        //categoryAdapter = CategoryAdapter()
-        //recyclerView.adapter = categoryAdapter
         categoryAdapter = CategoryAdapter(object : OnClickListener {
             override fun onClick(category: Category) {
-                /*val toast = Toast.makeText(this@MainActivity, category.name,Toast.LENGTH_SHORT)
-                toast.setGravity(Gravity.TOP,0,160)
-                toast.show()*/
-                /*startActivity(
-                    Intent(
-                        this@MainActivity,
-                        SecondActivity::class.java
-                    )
-                )*/
 
                 val intent = Intent(this@MainActivity, SecondActivity::class.java)
-                // Passing the data to the
-                // EmployeeDetails Activity
                 intent.putExtra(NEXT_SCREEN, category.name)
                 startActivity(intent)
 

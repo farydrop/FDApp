@@ -1,9 +1,10 @@
 package com.example.fdapp.presentation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Dialog
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fdapp.databinding.ActivitySecondBinding
 import com.example.fdapp.model.Dishes
@@ -14,6 +15,7 @@ import com.example.fdapp.presentation.adapters.OnTagClickListener
 import com.example.fdapp.presentation.adapters.TagAdapter
 import com.example.fdapp.viewmodel.SecondViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class SecondActivity : AppCompatActivity() {
 
@@ -68,6 +70,19 @@ class SecondActivity : AppCompatActivity() {
                 val toast = Toast.makeText(this@SecondActivity, dishes.name, Toast.LENGTH_SHORT)
                 toast.setGravity(Gravity.BOTTOM, 0, 160)
                 toast.show()
+
+                var dialog = DishesItemDialogFragment()
+                //dialog.show(supportFragmentManager, "dishesDialog")
+
+                //val dialogFragment: Dialog = Dialog()
+                val bundle = Bundle()
+                bundle.putString("NAME", dishes.name)
+                bundle.putString("IMAGE", dishes.image_url)
+                bundle.putString("PRICE", dishes.price.toString())
+                bundle.putString("WEIGHT", dishes.weight.toString())
+                bundle.putString("DESCRIPTION", dishes.description)
+                dialog.arguments = bundle
+                dialog.show(this@SecondActivity.supportFragmentManager, "dishesDialog")
             }
         })
 

@@ -7,5 +7,17 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/dialog_add_button</item>
+    </style>
+
+    <style name="YourApplicationTheme" parent="android:style/Theme.NoTitleBar">
+        <item name="android:buttonStyle">@style/button</item>
+    </style>
+
+    <style name="cardView" parent="CardView">
+        <item name="android:background">@drawable/dialog_fragment_background</item>
+    </style>
+
     <style name="Theme.FDApp" parent="Base.Theme.FDApp" />
 </resources>
