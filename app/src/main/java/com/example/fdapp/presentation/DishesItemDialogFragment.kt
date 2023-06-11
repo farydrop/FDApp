@@ -1,5 +1,6 @@
 package com.example.fdapp.presentation
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,19 +35,30 @@ class DishesItemDialogFragment(): DialogFragment() {
 
         val bundle = arguments
         val name = bundle!!.getString("NAME", "")
-        val image = bundle!!.getString("IMAGE", "")
-        val price = bundle!!.getString("PRICE", "")
-        val weight = bundle!!.getString("WEIGHT", "")
-        val description = bundle!!.getString("DESCRIPTION", "")
+        val image = bundle.getString("IMAGE", "")
+        val price = bundle.getString("PRICE", "")
+        val weight = bundle.getString("WEIGHT", "")
+        val description = bundle.getString("DESCRIPTION", "")
 
         binding.tvDialogTitle.text = name
         binding.tvPriceDialog.text = price
         binding.tvWeightDialog.text =weight
         binding.tvDescriptionDialog.text = description
-        //binding.ivDishesImageInDialog.setImageDrawable()
-
         val bitmap = BitmapFactory.decodeStream(URL(image).openConnection().getInputStream())
         binding.ivDishesImageInDialog.setImageBitmap(bitmap)
+        val intent = Intent(requireContext(), ThirdActivity::class.java)
+
+        binding.btnAddOrder.setOnClickListener{
+            intent.putExtra("NAME", name)
+            intent.putExtra("IMAGE", image)
+            intent.putExtra("PRICE", price)
+            intent.putExtra("WEIGHT", weight)
+        }
+
+        binding.ivFavButton.setOnClickListener {
+            startActivity(intent)
+            dismiss()
+        }
 
 
         return binding.root

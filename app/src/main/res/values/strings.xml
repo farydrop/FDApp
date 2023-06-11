@@ -18,4 +18,5 @@
     <string name="add_button_dialog">Добавить в корзину</string>
     <string name="w_dialog">г</string>
     <string name="p_dialog">₽</string>
+    <string name="pay_button">Оплатить</string>
 </resources>

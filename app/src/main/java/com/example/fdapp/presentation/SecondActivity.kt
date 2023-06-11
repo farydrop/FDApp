@@ -36,45 +36,16 @@ class SecondActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        viewModel.tagState.observe(this){
-            tagAdapter = TagAdapter(it, object : OnTagClickListener {
-
-                override fun onTagClick(tag: Tag) {
-                    val toast = Toast.makeText(this@SecondActivity, tag.name, Toast.LENGTH_SHORT)
-                    toast.setGravity(Gravity.BOTTOM, 0, 160)
-                    toast.show()
-                }
-            } )
-            binding.rvTag.adapter = tagAdapter
-        }
-
-        /*val emplist=Constants.getTagData()
-        binding.rvTag.layoutManager = LinearLayoutManager(this)
-        binding.rvTag.setHasFixedSize(true)
-        binding.rvTag.adapter = tagAdapter
-
-        tagAdapter = TagAdapter(emplist, object : OnTagClickListener {
-
-            override fun onTagClick(tag: Tag) {
-                val toast = Toast.makeText(this@SecondActivity, tag.name, Toast.LENGTH_SHORT)
-                toast.setGravity(Gravity.BOTTOM, 0, 160)
-                toast.show()
-            }
-        })*/
-
 
         val layoutManager = GridLayoutManager(this, 3)
         binding.rvDishes.layoutManager = layoutManager
         dishesAdapter = DishesAdapter(object : OnDishesClickListener {
             override fun onClick(dishes: Dishes) {
-                val toast = Toast.makeText(this@SecondActivity, dishes.name, Toast.LENGTH_SHORT)
+                /*val toast = Toast.makeText(this@SecondActivity, dishes.name, Toast.LENGTH_SHORT)
                 toast.setGravity(Gravity.BOTTOM, 0, 160)
-                toast.show()
+                toast.show()*/
 
                 var dialog = DishesItemDialogFragment()
-                //dialog.show(supportFragmentManager, "dishesDialog")
-
-                //val dialogFragment: Dialog = Dialog()
                 val bundle = Bundle()
                 bundle.putString("NAME", dishes.name)
                 bundle.putString("IMAGE", dishes.image_url)
@@ -85,13 +56,25 @@ class SecondActivity : AppCompatActivity() {
                 dialog.show(this@SecondActivity.supportFragmentManager, "dishesDialog")
             }
         })
-
         binding.rvDishes.adapter = dishesAdapter
         viewModel.getDishesList()
         viewModel.dishesList.observe(this) { list ->
             list.body()?.let {
                 dishesAdapter?.setList(it.dishes)
             }
+        }
+
+        viewModel.tagState.observe(this){
+            tagAdapter = TagAdapter(it, object : OnTagClickListener {
+
+                override fun onTagClick(tag: Tag) {
+                    val toast = Toast.makeText(this@SecondActivity, tag.name, Toast.LENGTH_SHORT)
+                    toast.setGravity(Gravity.BOTTOM, 0, 160)
+                    toast.show()
+                }
+            } )
+            binding.rvTag.adapter = tagAdapter
+
         }
 
     }

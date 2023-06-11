@@ -156,6 +156,7 @@
             android:textColor="@color/description_color"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddOrder"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/add_button_dialog"
