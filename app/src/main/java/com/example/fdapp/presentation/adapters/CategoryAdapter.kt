@@ -1,26 +1,22 @@
-package com.example.fdapp.presentation
+package com.example.fdapp.presentation.adapters
 
-import android.graphics.Color
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.GradientDrawable
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fdapp.R
-import com.example.fdapp.databinding.CategoryItemBinding
 import com.example.fdapp.model.Category
 import com.squareup.picasso.Picasso
 
 interface OnClickListener {
     fun onClick(category: Category)
 }
-class CategoryAdapter(private val onClickListener: OnClickListener ) : ListAdapter<Category,CategoryAdapter.CategoryViewHolder>(CategoryDiffCalldack()),View.OnClickListener {
+class CategoryAdapter(private val onClickListener: OnClickListener) : ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(
+    CategoryDiffCalldack()
+),View.OnClickListener {
 
     private var categoryList = emptyList<Category>()
     //var onCategoryItemClickListener: ((Category) -> Unit)? = null

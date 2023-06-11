@@ -1,12 +1,10 @@
-package com.example.fdapp.presentation
+package com.example.fdapp.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fdapp.R
 import com.example.fdapp.databinding.DishesItemBinding
-import com.example.fdapp.model.Category
 import com.example.fdapp.model.Dishes
 import com.squareup.picasso.Picasso
 

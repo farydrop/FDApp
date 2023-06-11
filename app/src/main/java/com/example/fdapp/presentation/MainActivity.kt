@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fdapp.databinding.ActivityMainBinding
 import com.example.fdapp.model.Category
+import com.example.fdapp.presentation.adapters.CategoryAdapter
+import com.example.fdapp.presentation.adapters.OnClickListener
 import com.example.fdapp.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

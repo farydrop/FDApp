@@ -2,15 +2,16 @@ package com.example.fdapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.SyncStateContract
 import android.view.Gravity
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fdapp.databinding.ActivitySecondBinding
-import com.example.fdapp.model.Constants
 import com.example.fdapp.model.Dishes
 import com.example.fdapp.model.Tag
+import com.example.fdapp.presentation.adapters.DishesAdapter
+import com.example.fdapp.presentation.adapters.OnDishesClickListener
+import com.example.fdapp.presentation.adapters.OnTagClickListener
+import com.example.fdapp.presentation.adapters.TagAdapter
 import com.example.fdapp.viewmodel.SecondViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -1,4 +1,4 @@
-package com.example.fdapp.presentation
+package com.example.fdapp.presentation.adapters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.fdapp.model.Category
