@@ -1,6 +1,7 @@
 package com.example.fdapp.viewmodel
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
@@ -16,6 +17,7 @@ class OrderViewModel(private val repository: OrderRepository): ViewModel() {
     fun insert(order: Order) = viewModelScope.launch {
         repository.insert(order)
     }
+
 
 }
 

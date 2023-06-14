@@ -68,11 +68,26 @@
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bnvSecond"
         app:layout_constraintTop_toBottomOf="@+id/rvTag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         tools:listitem="@layout/dishes_item"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvSecond"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:itemIconSize="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="0dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemActiveIndicatorStyle="@style/Widget.Design.BottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation_menu"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

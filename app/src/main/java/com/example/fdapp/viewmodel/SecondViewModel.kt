@@ -34,10 +34,5 @@ class SecondViewModel : ViewModel() {
         }
     }
 
-    fun onChangeEnableState(tag: Tag) {
-        val newItem = tag.copy(enabled = !tag.enabled)
-        tagData.remove(tag)
-        tagData.add(newItem)
-    }
 
 }

@@ -71,8 +71,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bnvMain"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/category_item"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvMain"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        app:itemActiveIndicatorStyle="@style/Widget.Design.BottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="2dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/navigation_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

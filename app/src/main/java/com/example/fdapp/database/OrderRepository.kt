@@ -5,9 +5,8 @@ import kotlinx.coroutines.flow.Flow
 
 class OrderRepository(private val orderDao: OrderDao) {
 
-    val allOrders: Flow<List<Order>> = orderDao.getAlphabetized()
+    val allOrders: Flow<List<Order>> = orderDao.getItem()
 
-    @Suppress("RedundantSuspendModifier")
     @MainThread
     suspend fun insert(order: Order) {
         orderDao.insert(order)
